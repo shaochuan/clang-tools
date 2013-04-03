@@ -2,8 +2,11 @@
 #include "bar.h"
 #include "foo.h"
 #include "third.h"
-class barfoo : public bar, public foo, private third
+#include "inherit.h"
+
+class barfoo : public bar, private third, public inherit <foo>
 {
-	void barfoo_sing();
+public:
+	void barfoo_sing() {  };
 };
 
