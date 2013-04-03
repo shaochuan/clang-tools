@@ -22,5 +22,5 @@ if __name__ == '__main__':
     cpp_file_path = os.path.join(kInputsDir, 'main.cpp')
     index = Index.create()
     tu = index.parse(cpp_file_path)
-    for base, parent in each_inheritance_relation(tu.cursor):
-        print base, parent
+    for this, parent in each_inheritance_relation(tu.cursor):
+        print this, parent
