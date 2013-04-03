@@ -9,7 +9,8 @@ def each_class_cursor(cursor):
     for c in cursor.get_children():
         if c.kind == CursorKind.CLASS_DECL:
             yield c
-        each_class_cursor(c)
+        for cls in each_class_cursor(c):
+            yield cls
 
 def each_inheritance_relation(cursor):
     for cls in each_class_cursor(cursor):
