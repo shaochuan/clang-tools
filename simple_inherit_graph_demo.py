@@ -15,7 +15,7 @@ def build():
     tu = index.parse(cpp_file_path)
     G = pygraphviz.AGraph(directed=True)
     for this, parent in ir.each_inheritance_relation(tu.cursor):
-        edge = (this, parent)
+        edge = (parent, this)
         G.add_edge(edge)
     return G
 
