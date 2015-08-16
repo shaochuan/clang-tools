@@ -1,6 +1,6 @@
 clang-tools
 ===========
-A tool that visualizes inheritance relations in C++.
+A tool that visualizes inheritance relations between classes in C++.
 
 Dependencies
 ============
@@ -15,6 +15,9 @@ $ git clone https://github.com/shaochuan/clang-tools.git
 $ cd clang-tools
 $ python simple_inherit_graph_demo.py
 ```
+
+![](https://github.com/shaochuan/clang-tools/blob/master/output/inherit.png)
+
 2. Running v8 example
 ```
 $ ./pull_submod.sh
